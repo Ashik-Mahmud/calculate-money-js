@@ -41,7 +41,10 @@ hr{
     max-width: 1270px;
     margin: auto;
 }
-
+.disabled{
+    opacity: .7;
+    pointer-events: none;
+}
 /* =============== start main style ============== */
 
 #header {

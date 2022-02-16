@@ -20,7 +20,7 @@ calculateBtn.addEventListener('click', function () {
     let rentInputValue = rentInputField.value;
     let clothInputValue = clothesInputField.value;
     if ((incomeInputValue < 0 || foodInputValue < 0 || rentInputValue < 0 || clothInputValue < 0) || (incomeInputValue === '' || foodInputValue === '' || rentInputValue === '' || clothInputValue === '')) {
-        errorMsgHandler('All fields are required & put negative number!');
+        errorMsgHandler('All fields are required & put positive value!');
     } else {
         let totalExpenseAmount = parseFloat(foodInputValue) + parseFloat(rentInputValue) + parseFloat(clothInputValue);
         if (incomeInputValue < totalExpenseAmount) {
@@ -34,7 +34,29 @@ calculateBtn.addEventListener('click', function () {
 
 
 /* step 3. Work with save amount  */
-const saveAmountBtn = document.getElementById("")
+const saveAmountBtn = document.getElementById("save-money-btn");
+const saveMoneyField = document.getElementById('save-money-field');
+const saveAmountText = document.getElementById("save-amount");
+const remainingAmountText = document.getElementById("remaining-amount");
+
+saveAmountBtn.addEventListener('click', function () {
+    let incomeAmount = incomeInputField.value;
+    let saveInputValue = saveMoneyField.value;
+    if (incomeAmount === '') {
+        errorMsgHandler("First fil up Income field !")
+    } else if (saveInputValue < 0 || saveInputValue === '') {
+        errorMsgHandler("Save Money field is required & Put positive number.")
+    } else {
+        let savingAmt = (incomeAmount * saveInputValue) / 100;
+        let netBalanceAmount = parseFloat(netBalance.innerText);
+        if ( savingAmt > netBalanceAmount) {
+            errorMsgHandler('Sorry Your Net balance ' + netBalanceAmount + ' So, you can not save more money then of your net balance');
+        } else {
+            saveAmountText.innerText = savingAmt;
+            remainingAmountText.innerText = netBalanceAmount - savingAmt;
+        }
+    }
+})
 
 
 
@@ -44,5 +66,5 @@ function errorMsgHandler(message) {
     errorMessage.querySelector('span').innerText = message;
     setTimeout(() => {
         errorMessage.classList.remove('active');
-    }, 4000);
+    }, 5000);
 }
