@@ -1,6 +1,4 @@
 /*=== app.js file ready ===*/
-
-
 /* step 1. Select all of necessary Elements  */
 const calculateBtn = document.getElementById("calculate-money-btn");
 const incomeInputField = document.getElementById("income-field");
@@ -13,7 +11,6 @@ const netBalance = document.getElementById('balance');
 const errorMessage = document.getElementById('error-msg');
 
 /* step 2. work with calculate button  */
-
 calculateBtn.addEventListener('click', function () {
     let incomeInputValue = incomeInputField.value;
     let foodInputValue = foodInputField.value;
@@ -31,14 +28,11 @@ calculateBtn.addEventListener('click', function () {
         }
     }
 })
-
-
 /* step 3. Work with save amount  */
 const saveAmountBtn = document.getElementById("save-money-btn");
 const saveMoneyField = document.getElementById('save-money-field');
 const saveAmountText = document.getElementById("save-amount");
 const remainingAmountText = document.getElementById("remaining-amount");
-
 saveAmountBtn.addEventListener('click', function () {
     let incomeAmount = incomeInputField.value;
     let saveInputValue = saveMoneyField.value;
@@ -49,7 +43,7 @@ saveAmountBtn.addEventListener('click', function () {
     } else {
         let savingAmt = (incomeAmount * saveInputValue) / 100;
         let netBalanceAmount = parseFloat(netBalance.innerText);
-        if ( savingAmt > netBalanceAmount) {
+        if (savingAmt > netBalanceAmount) {
             errorMsgHandler('Sorry Your Net balance ' + netBalanceAmount + ' So, you can not save more money then of your net balance');
         } else {
             saveAmountText.innerText = savingAmt;
@@ -57,9 +51,6 @@ saveAmountBtn.addEventListener('click', function () {
         }
     }
 })
-
-
-
 /*  error message function  */
 function errorMsgHandler(message) {
     errorMessage.classList.add('active');
