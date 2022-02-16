@@ -1,0 +1,40 @@
+/* style sheet  */
+
+/* =========== google fonts ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*============ variables =========== */
+:root{
+    /* fonts  */
+    --poppins: 'Poppins', sans-serif;
+    /* colors  */
+    --primary-color: #59A5FF;
+    --light-color: #F8F8F8;
+    --dark-color: #222222;
+}
+/*=========== base css ============ */
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: var(--poppins);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/*============= common classes ============ */
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* =============== start main style ============== */
+
+
+

@@ -1,1 +1,1 @@
-# Money Master Web Application
+# Calculate Money Web Application
