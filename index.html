@@ -40,6 +40,7 @@
                             <input type="number" id="income-field" placeholder="Put Your Net Income.">
                         </div>
                     </div>
+                    <hr>
                     <!-- single fields  -->
                     <div class="fields">
                         <h3 class="field-title">Expense Money</h3>
@@ -61,22 +62,23 @@
                     </div>
                     <!-- total estimate display area  -->
                     <div class="display-total">
-                        <p class="total-expense">Total Expense <span id="expense">800</span>$</p>
-                        <p class="net-balance">Net Balance <span id="balance">400</span>$</p>
+                        <p class="total-expense">Total Expense ($) <span id="expense">800</span></p>
+                        <p class="net-balance">Net Balance ($) <span id="balance">400</span></p>
                     </div>
+                    <hr>
 
                     <!-- money save area here  -->
                     <div class="save-money-area">
                         <div class="field">
-                            <label for="save-money-field">Save Money</label>
-                            <input type="number" id="save-money-field" placeholder="Save Money">
+                            <label for="save-money-field">Save Money: </label>
+                            <input type="number" id="save-money-field" value="15" placeholder="Save ">
                             <span>%</span>
                             <button id="save-money-btn">Save</button>
                         </div>
                         <!-- display saving amount  -->
                         <div class="display-save-amount">
-                            <p class="total-saving-amount">Savings Amount <span id="save-amount">504</span>$</p>
-                            <p class="remaining-balance">Remaining Balance <span id="remaining-amount">504</span>$</p>
+                            <p class="total-saving-amount">Savings Amount <span id="save-amount">504</span></p>
+                            <p class="remaining-balance">Remaining Balance <span id="remaining-amount">504</span></p>
                         </div>
                     </div>
 
@@ -88,7 +90,11 @@
     <!-- main part end here  -->
 
     <!-- footer part start here  -->
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <p class="copyright-text">
+            &copy; Copyright by <a href="https://dev-ashikmahmud.netlify.app/" target="_blank">Ashik Mahmud</a>
+        </p>
+    </footer>
     <!-- footer part end here  -->
 
 
