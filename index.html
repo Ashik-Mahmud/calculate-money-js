@@ -16,11 +16,75 @@
     <!-- working tree clean  -->
 
     <!-- header part start here  -->
-    <header id="header"></header>
+    <header id="header">
+        <div class="header-wrapper container">
+            <h1>Calculate Money 💸</h1>
+        </div>
+    </header>
     <!-- header part end here  -->
 
     <!-- main part start here  -->
-    <main id="main"><h1>Hello World!</h1></main>
+    <main id="main">
+        <!-- main estimate area  -->
+        <section id="calculate-area">
+            <div class="container calculate-container">
+                <div class="calculate-image">
+                    <img src="./assets/image/banner.jpg" alt="banner image calculate image">
+                </div>
+                <div class="calculate-form">
+                    <!-- single fields  -->
+                    <div class="fields">
+                        <h3 class="field-title">Income Money</h3>
+                        <div class="field">
+                            <label for="income-field">Income</label>
+                            <input type="number" id="income-field" placeholder="Put Your Net Income.">
+                        </div>
+                    </div>
+                    <!-- single fields  -->
+                    <div class="fields">
+                        <h3 class="field-title">Expense Money</h3>
+                        <div class="field">
+                            <label for="food-field">Food</label>
+                            <input type="number" id="food-field" placeholder="Enter Food Money.">
+                        </div>
+                        <div class="field">
+                            <label for="rent-field">Rent</label>
+                            <input type="number" id="rent-field" placeholder="Enter Rent Money.">
+                        </div>
+                        <div class="field">
+                            <label for="clothes-field">Clothes</label>
+                            <input type="number" id="clothes-field" placeholder="Enter Clothes Money.">
+                        </div>
+                        <div class="field">
+                            <button id="calculate-money-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- total estimate display area  -->
+                    <div class="display-total">
+                        <p class="total-expense">Total Expense <span id="expense">800</span>$</p>
+                        <p class="net-balance">Net Balance <span id="balance">400</span>$</p>
+                    </div>
+
+                    <!-- money save area here  -->
+                    <div class="save-money-area">
+                        <div class="field">
+                            <label for="save-money-field">Save Money</label>
+                            <input type="number" id="save-money-field" placeholder="Save Money">
+                            <span>%</span>
+                            <button id="save-money-btn">Save</button>
+                        </div>
+                        <!-- display saving amount  -->
+                        <div class="display-save-amount">
+                            <p class="total-saving-amount">Savings Amount <span id="save-amount">504</span>$</p>
+                            <p class="remaining-balance">Remaining Balance <span id="remaining-amount">504</span>$</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- main part end here  -->
 
     <!-- footer part start here  -->
