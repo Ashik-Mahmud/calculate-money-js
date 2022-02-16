@@ -16,7 +16,7 @@ Hello broh!! this is simple calculate money application for assignment. So, If i
 - Favicon from Icons8
 and many more
 ~~~
-## If you would like to see project please go to about section and grab the live link
+## Can't share the live link because this is Assignment.
 
 ## Here is preview in this project
 ![ImageScreenshot](./preview.png)
