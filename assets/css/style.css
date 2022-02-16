@@ -197,10 +197,10 @@ hr{
     padding: 0.7rem;
     border-left: 5px solid var(--primary-color);
     box-shadow: 0px 0px 15px rgba(0,0,0,0.08);
-    font-size: .9rem;
+    font-size: 1.01rem;
     backdrop-filter: blur(2px);
     transition: all 0.5s ease;
-    max-width: 350px;
+    max-width: 370px;
     
 }
 .error.active{
