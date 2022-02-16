@@ -11,7 +11,7 @@ const netBalance = document.getElementById('balance');
 const errorMessage = document.getElementById('error-msg');
 
 /* step 2. work with calculate button  */
-calculateBtn.addEventListener('click', function () {
+function updateCalculateAmount() {
     let incomeInputValue = incomeInputField.value;
     let foodInputValue = foodInputField.value;
     let rentInputValue = rentInputField.value;
@@ -27,13 +27,16 @@ calculateBtn.addEventListener('click', function () {
             netBalance.innerText = incomeInputValue - totalExpenseAmount;
         }
     }
-})
-/* step 3. Work with save amount  */
+}
+calculateBtn.addEventListener('click', updateCalculateAmount);
+
+/* step 3. Work with save amount button */
 const saveAmountBtn = document.getElementById("save-money-btn");
 const saveMoneyField = document.getElementById('save-money-field');
 const saveAmountText = document.getElementById("save-amount");
 const remainingAmountText = document.getElementById("remaining-amount");
-saveAmountBtn.addEventListener('click', function () {
+
+function updateSavingAmount() {
     let incomeAmount = incomeInputField.value;
     let saveInputValue = saveMoneyField.value;
     if (incomeAmount === '') {
@@ -50,7 +53,9 @@ saveAmountBtn.addEventListener('click', function () {
             remainingAmountText.innerText = netBalanceAmount - savingAmt;
         }
     }
-})
+}
+saveAmountBtn.addEventListener('click', updateSavingAmount);
+
 /*  error message function  */
 function errorMsgHandler(message) {
     errorMessage.classList.add('active');
